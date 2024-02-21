@@ -264,6 +264,11 @@ export class JsiSkPath extends HostObject<Path, "Path"> implements SkPath {
     return this.ref.dash(on, off, phase);
   }
 
+  dash(on: number, off: number, phase: number) {
+    this.ref.dash(on, off, phase);
+    return this;
+  }
+
   equals(other: SkPath) {
     return this.ref.equals(JsiSkPath.fromValue(other));
   }

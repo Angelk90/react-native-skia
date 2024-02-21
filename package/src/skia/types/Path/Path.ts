@@ -386,6 +386,16 @@ export interface SkPath extends SkJSIInstance<"Path"> {
   dash(on: number, off: number, phase: number): boolean;
 
   /**
+   * Changes this path to be the dashed version of itself. This is the same effect as creating
+   * a DashPathEffect and calling filterPath on this path.
+   * @param on
+   * @param off
+   * @param phase
+   * Returns reference to SkPath
+   */
+  dash(on: number, off: number, phase: number): SkPath;
+
+  /**
    * Returns true if other path is equal to this path.
    * @param other
    */
